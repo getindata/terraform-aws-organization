@@ -1,3 +1,3 @@
-provider "null" {
-  # Configuration options
+provider "aws" {
+  region = "eu-central-1"
 }

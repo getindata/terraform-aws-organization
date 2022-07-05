@@ -1,6 +1,34 @@
-# Example output from the module
+output "id" {
+  description = "Identifier of the organization"
+  value       = resource.aws_organizations_organization.this_organizations_organization.id
+}
 
-output "example_output" {
-  description = "Example output of the module"
-  value       = var.example_var
+output "arn" {
+  description = "ARN of the organization"
+  value       = resource.aws_organizations_organization.this_organizations_organization.arn
+}
+
+output "accounts" {
+  description = "List of organization accounts including the master account"
+  value       = resource.aws_organizations_organization.this_organizations_organization.accounts
+}
+
+output "master_account_arn" {
+  description = "ARN of the master account"
+  value       = resource.aws_organizations_organization.this_organizations_organization.master_account_arn
+}
+
+output "roots" {
+  description = "List of organization roots"
+  value       = resource.aws_organizations_organization.this_organizations_organization.roots
+}
+
+output "organizational_units" {
+  description = "Details of Organizational Units"
+  value       = module.this_organizational_units
+}
+
+output "policies" {
+  description = "Details of Policies"
+  value       = module.this_policies
 }
