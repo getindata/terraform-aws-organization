@@ -1,4 +1,4 @@
-output "example_output" {
-  description = "Example output of the module"
-  value       = module.terraform_module_template
+output "organization_details" {
+  description = "Details of organization structure"
+  value       = module.aws_organization
 }
