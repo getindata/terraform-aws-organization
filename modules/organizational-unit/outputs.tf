@@ -9,6 +9,6 @@ output "id" {
 }
 
 output "accounts" {
-  description = "List of OU child accounts"
-  value       = resource.aws_organizations_organizational_unit.this_orgranizations_organizational_unit.accounts
+  description = "Map of OU child accounts"
+  value       = module.this_orgranizations_organizational_unit_account
 }

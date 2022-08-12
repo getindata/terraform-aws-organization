@@ -46,7 +46,7 @@ It also provides functionality to attach a list of organizational policies to th
 
 | Name | Description |
 |------|-------------|
-| <a name="output_accounts"></a> [accounts](#output\_accounts) | List of OU child accounts |
+| <a name="output_accounts"></a> [accounts](#output\_accounts) | Map of OU child accounts |
 | <a name="output_arn"></a> [arn](#output\_arn) | ARN of this OU |
 | <a name="output_id"></a> [id](#output\_id) | ID of this OU |
 

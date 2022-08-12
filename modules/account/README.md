@@ -50,6 +50,7 @@ It also provides functionality to attach a list of organizational policies to th
 | <a name="output_email"></a> [email](#output\_email) | e-mail associated with this AWS account |
 | <a name="output_id"></a> [id](#output\_id) | ID of this AWS account |
 | <a name="output_name"></a> [name](#output\_name) | Name of this AWS account |
+| <a name="output_role_arn"></a> [role\_arn](#output\_role\_arn) | The name of an IAM role that Organizations automatically preconfigures in the new member account. This role trusts the root account, allowing users in the root account to assume the role, as permitted by the root account administrator. The role has administrator permissions in the new member account. |
 
 ## Providers
 
