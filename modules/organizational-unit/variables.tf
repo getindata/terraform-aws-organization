@@ -4,7 +4,7 @@ variable "parent_id" {
 }
 
 variable "accounts" {
-  description = "List of AWS accounts to be created inside of that OU"
+  description = "Map of AWS accounts to be created inside of that OU"
   type        = any
   default     = {}
 }
