@@ -178,8 +178,10 @@ using submodules, placed in `./modules` directory
 | <a name="output_arn"></a> [arn](#output\_arn) | ARN of the organization |
 | <a name="output_id"></a> [id](#output\_id) | Identifier of the organization |
 | <a name="output_master_account_arn"></a> [master\_account\_arn](#output\_master\_account\_arn) | ARN of the master account |
+| <a name="output_non_master_accounts"></a> [non\_master\_accounts](#output\_non\_master\_accounts) | List of organization accounts including the master account |
 | <a name="output_organizational_units"></a> [organizational\_units](#output\_organizational\_units) | Details of Organizational Units |
 | <a name="output_policies"></a> [policies](#output\_policies) | Details of Policies |
+| <a name="output_root_accounts"></a> [root\_accounts](#output\_root\_accounts) | Details of AWS Accounts created under organizations root |
 | <a name="output_roots"></a> [roots](#output\_roots) | List of organization roots |
 
 ## Providers

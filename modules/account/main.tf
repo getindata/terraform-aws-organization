@@ -7,7 +7,7 @@
  */
 
 resource "aws_organizations_account" "this_organizations_account" {
-  name      = can(module.this.descriptors["organizations_account"]) ? module.this.descriptors["organizations_account"] : module.this.id
+  name      = local.account_name
   email     = var.email
   parent_id = var.parent_id
   role_name = var.role_name == "" ? null : var.role_name
