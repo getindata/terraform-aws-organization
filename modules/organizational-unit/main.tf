@@ -1,7 +1,7 @@
 /**
  * # AWS Organizational Unit terraform module
  *
- * This module creates AWS Organization OUs and uses AWS Accounts module to 
+ * This module creates AWS Organization OUs and uses AWS Accounts module to
  * create accounts inside of that OU.
  *
  * It also provides functionality to attach a list of organizational policies to the OU.
@@ -25,7 +25,7 @@ resource "aws_organizations_policy_attachment" "this_organizations_policy_attach
 
 # if list of accounts is added to OU - create them inside that OU
 module "this_orgranizations_organizational_unit_account" {
-  for_each = var.accounts
+  for_each = local.accounts
 
   source  = "../account"
   context = module.this.context
