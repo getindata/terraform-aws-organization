@@ -8,7 +8,7 @@
  */
 
 
-resource "aws_organizations_organizational_unit" "this_orgranizations_organizational_unit" {
+resource "aws_organizations_organizational_unit" "this_organizations_organizational_unit" {
   name      = can(module.this.descriptors["organizations_organzational_unit"]) ? module.this.descriptors["organizations_organzational_unit"] : module.this.id
   parent_id = var.parent_id
 
@@ -20,11 +20,11 @@ resource "aws_organizations_policy_attachment" "this_organizations_policy_attach
   count = length(var.attached_policies)
 
   policy_id = var.attached_policies[count.index]
-  target_id = aws_organizations_organizational_unit.this_orgranizations_organizational_unit.id
+  target_id = aws_organizations_organizational_unit.this_organizations_organizational_unit.id
 }
 
 # if list of accounts is added to OU - create them inside that OU
-module "this_orgranizations_organizational_unit_account" {
+module "this_organizations_organizational_unit_account" {
   for_each = local.accounts
 
   source  = "../account"
@@ -33,7 +33,7 @@ module "this_orgranizations_organizational_unit_account" {
   # Compulsory parameters
   email     = each.value.email
   name      = lookup(each.value, "name", each.key)
-  parent_id = aws_organizations_organizational_unit.this_orgranizations_organizational_unit.id
+  parent_id = aws_organizations_organizational_unit.this_organizations_organizational_unit.id
 
   # Optional parameters
   role_name                  = lookup(each.value, "role_name", "organization-admin")

@@ -3,8 +3,8 @@
  *
  * This module creates and manages AWS Organization Policies.
  *
- * It also provides functionality to attach policy a to list 
- * of targets (The unique identifier (ID) of the root, 
+ * It also provides functionality to attach policy a to list
+ * of targets (The unique identifier (ID) of the root,
  * organizational unit, or account number).
  */
 

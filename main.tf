@@ -1,12 +1,12 @@
 /**
  * # AWS Organizations terraform module
  *
- * This module is able to create and manage AWS organization, accounts, 
+ * This module is able to create and manage AWS organization, accounts,
  * units and policies
  *
  * Module itself creates an AWS organization and manages additional resources
  * using submodules, placed in `./modules` directory
- * 
+ *
  */
 
 resource "aws_organizations_organization" "this_organizations_organization" {
